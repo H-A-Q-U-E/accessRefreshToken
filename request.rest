@@ -1,0 +1,9 @@
+GET http://localhost:3551/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaGFxIiwiaWF0IjoxNzI5MTYxNDc4fQ.m5d9Gr2_RjchchdyTNYBfWfyDyNQCq1jZvB0_gBTOWg"
+###
+POST http://localhost:3551/login
+Content-Type: application/json
+
+{
+    "username":"haq"
+}
