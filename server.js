@@ -13,19 +13,13 @@ const posts = [
     title: "post",
   },
   {
-    username: "haq",
+    username: "mas",
     title: "post 1",
   },
 ];
 
 app.get("/posts", authenticateToken, (req, res) => {
   res.json(posts.filter((post) => post.username === req.user.name));
-});
-app.post("/login", (req, res) => {
-  const username = req.body.username;
-  const user = { name: username };
-  const accessToken = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET);
-  res.json({ accessToken: accessToken });
 });
 
 function authenticateToken(req, res, next) {
@@ -39,4 +33,4 @@ function authenticateToken(req, res, next) {
     next();
   });
 }
-app.listen(3551);
+app.listen(3551, console.log(""));

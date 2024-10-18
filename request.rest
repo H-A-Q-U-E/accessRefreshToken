@@ -1,9 +1,30 @@
 GET http://localhost:3551/posts
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaGFxIiwiaWF0IjoxNzI5MTYxNDc4fQ.m5d9Gr2_RjchchdyTNYBfWfyDyNQCq1jZvB0_gBTOWg"
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaGFxdWUiLCJpYXQiOjE3MjkyMzU4MTUsImV4cCI6MTcyOTIzNTgzNX0.wuxVjEkmBVbBc5fZQftyquNSBLopyUPVRgfFX5XzIRI
+
+
 ###
-POST http://localhost:3551/login
+
+DELETE http://localhost:3553/logout
+
+
+
+###
+
+
+POST http://localhost:3553/token
 Content-Type: application/json
 
 {
-    "username":"haq"
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiaGFxdWUiLCJpYXQiOjE3MjkyMzU3Mzh9.piS6DriLBJbMtK99WCRbhk44tMn8uGDp_wioqyJTrvw"
+}
+
+###
+
+
+
+POST http://localhost:3553/login
+Content-Type: application/json
+
+{
+    "username":"haque"
 }
